@@ -17,7 +17,7 @@ def getRelevantData():
     print(filter_data)
     for i in range(1,len(tr)):
         td=tr[i].find_all('td')
-        lb=[ td[t].text.strip()  for t in range(len(td))  ]
+        lb=[ td[t].p.get_text().strip() for t in range(len(td))  ]
         filter_data['data'].append(lb)
     
     return filter_data
